@@ -9,7 +9,7 @@ const app = express();
 let items = [];
 
 app.use(bodyParser.urlencoded({extended:true}));
-
+app.use(express.static("public"))
 
 app.set('view engine', 'ejs');
 
