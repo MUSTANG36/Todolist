@@ -2,32 +2,37 @@
 <html>
 <head>
     <title>To do list</title>
-    
+    <link rel="stylesheet" href="css/styles.css">
+  
+
 </head>
 <body>
 
-    <h1><%= kindOfDay %> </h1>
 
-    <!-- <% if(kindOfDay === "Saturday" || kindOfDay== "Sunday"){ %>
-        <h1 style="color: purple">  <%= kindOfDay %> ToDo List</h1>
-    <% }else{ %>
-            <h1 style="color: blue">  <%= kindOfDay %> ToDo List</h1>
-        <% } %> -->
+        <div class="date-box" id="heading">
+            <h1><%= kindOfDay %> </h1>
+        </div>
 
-        <ul>    
-            <li>Buy</li>
-            <li>Cook Food</li>
-            <li>Eat</li>
-           
+
+        <div class="box">
             <% for(let i = 0; i < newListItems.length;i++){ %>
-                <li><%= newListItems[i] %></li>
+             <div class="item"> 
+                <input type="checkbox">
+                    <p>
+                        <%= newListItems[i] %>
+                    </p>
+               
+            </div>
             <% } %>
-        </ul>
 
-        <form class="form-group" action='/' method="POST">
-            <input id="todoItem" name="todoItem" placeholder="item" type="text"> 	
-            <button type="submit" name="button" > Add</button>
-        </form>
+             <form class="item" action='/' method="POST">
+                <input id="todoItem" name="todoItem" placeholder="New item" type="text"> 	
+                <button type="submit" name="button" >+</button>
+            </form>
+        </div>
+
         
+           
+   
 </body>
 </html> 
