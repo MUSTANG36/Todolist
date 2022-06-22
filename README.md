@@ -1,5 +1,5 @@
 # Todolist Demo link
-https://mustang36.github.io/Todolist/
+[To Do List Demo](https://techx-ochoa.github.io/Todolist/)
 
 # Features
 * Add items
